@@ -1,7 +1,13 @@
 :root{
-    --nero: #000000;
+    --scuro: #000000;
     --grigio-scuro: #66666e;
     --grigio: #9999a1;
     --grigio-chiaro: #e6e6e9;
-    --bianco: #f4f4f6;
+    --chiaro: #f4f4f6;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
 }

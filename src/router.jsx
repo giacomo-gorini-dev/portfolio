@@ -1,41 +1,49 @@
-import HomePage from "./pages/HomePage";
-import RootLayout from "./RootLayout";
-import BlogPage from "./pages/BlogPage";
-import SkillPage from "./pages/SkillPage";
-import ContactPage from "./pages/ContactPage";
-import CardBlog from "./components/CardBlog";
-import CardSkil from "./components/CardSkill";
 import { createBrowserRouter } from "react-router-dom";
 
-export const router = createBrowserRouter([
+import HomePage from "./pages/HomePage";
+import BlogPage from "./pages/BlogPage";
+import SkillsPage from "./pages/SkillsPage";
+import ContactPage from "./pages/ContactPage";
+import RootLayout from "./RootLayout";
+
+import BlogOverlayPortal from "./components/BlogOverlayPortal";
+import SkillOverlayPortal from "./components/SkillOverlayPortal";
+
+const router = createBrowserRouter([
   {
-    element: <RootLayout></RootLayout>,
+    path: "/",
+    element: <RootLayout />,
     children: [
       {
-        path: "/",
-        element: <HomePage></HomePage>,
+        index: true,
+        element: <HomePage />,
       },
       {
-        path: "/blog",
-        element: <BlogPage></BlogPage>,
+        path: "blog",
+        element: <BlogPage />,
+        children:[
+          {
+            path:":postId",
+            element: <BlogOverlayPortal />,
+          }
+        ],
       },
       {
-        path: "/blog/:cardBlog-id",
-        element: <CardBlog></CardBlog>,
+        path: "skills",
+        element: <SkillsPage />,
+         children:[
+          {
+            path:":skillId",
+            element: <SkillOverlayPortal />,
+          }
+        ]
       },
       {
-        path: "/skills",
-        element: <SkillPage></SkillPage>,
-      },
-
-      {
-        path: "/skills/:cardSkil-id",
-        element: <CardSkil></CardSkil>,
-      },
-      {
-        path: "/contact",
-        element: <ContactPage></ContactPage>,
+        path: "contact",
+        element: <ContactPage />,
       },
     ],
   },
 ]);
+
+export default router;
