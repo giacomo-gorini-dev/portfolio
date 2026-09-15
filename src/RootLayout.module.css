@@ -1,0 +1,16 @@
+.root-layout {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100vw;
+  overflow-y: hidden;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 3rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+  font-family: "Inter", sans-serif;
+}

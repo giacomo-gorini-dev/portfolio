@@ -1,13 +1,40 @@
-:root{
-    --scuro: #000000;
-    --grigio-scuro: #66666e;
-    --grigio: #9999a1;
-    --grigio-chiaro: #e6e6e9;
-    --chiaro: #f4f4f6;
+:root {
+  /* --- Palette Principale --- */
+  --bg-dark: #050b0e;         
+  --bg-surface: #0a151b;       
+  --bg-surface-hover: #112028; 
+
+  /* --- Toni Petrolio e Verde Acqua --- */
+  --petrol-dark: #0f2b32;      
+  --petrol-medium: #15424b;  
+  --teal-accent: #1e6b7b;      
+  --teal-light: #2da1b5;      
+
+  /* --- Testo e Contrasto --- */
+  --text-primary: #e6f1f3;    
+  --text-secondary: #8ab0b8;   
+  --text-muted: #4e7078;       
+
+  /* --- Sfumature (Gradients) --- */
+  --gradient-bg: linear-gradient(135deg, var(--bg-dark) 0%, #08171d 50%, var(--petrol-dark) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--teal-accent) 0%, var(--teal-light) 100%);
+  --gradient-glow: radial-gradient(circle at center, rgba(45, 161, 181, 0.15) 0%, transparent 70%);
+
+  /* --- Effetti --- */
+  --border-subtle: rgba(45, 161, 181, 0.15);
+  --shadow-glow: 0 0 20px rgba(45, 161, 181, 0.2);
 }
 
-body{
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow-y: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden; 
 }

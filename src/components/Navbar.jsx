@@ -9,34 +9,30 @@ import imgContact from "../assets/contact.png";
 function Navbar() {
   return (
     <nav className={styles.navbar}>
-      <div className={styles.profile}>
-          <div>Giacomo</div>
-          <div>Gorini</div>
-          <div>Portfolio</div>
-      </div>
-      <ul className={styles["ul-part"]}>
-        <li className={styles.link}>
-          <img src={imgHome} alt="." />
-          <Link to={"/"} className={styles["link-text"]}>
+      <h2>Menu</h2>
+      <ul>
+        <li>
+          <Link to={"/"} className={styles.link}>
             Home
+            <img src={imgHome} alt="." />
           </Link>
         </li>
-        <li className={styles.link}>
-          <img src={imgBlog} alt="." />
-          <Link to={"/blog"} className={styles["link-text"]}>
+        <li>
+          <Link to={"/blog"} className={styles.link}>
             Blog
+            <img src={imgBlog} alt="." />
           </Link>
         </li>
-        <li className={styles.link}>
-          <img src={imgSkills} alt="." />
-          <Link to={"/skills"} className={styles["link-text"]}>
+        <li>
+          <Link to={"/skills"} className={styles.link}>
             Skills
+            <img src={imgSkills} alt="." />
           </Link>
         </li>
-        <li className={styles.link}>
-          <img src={imgContact} alt="." />
-          <Link to={"/contact"} className={styles["link-text"]}>
+        <li>
+          <Link to={"/contact"} className={styles.link}>
             Contact
+            <img src={imgContact} alt="." />
           </Link>
         </li>
       </ul>
