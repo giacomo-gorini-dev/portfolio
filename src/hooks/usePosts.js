@@ -23,7 +23,7 @@ export default function usePosts() {
     isLoading,
     error,
     refetch,
-  } = useQuery({ queryKey: ["Posts"], queryFn: fetchPosts });
+  } = useQuery({ queryKey: ["Posts"], queryFn: fetchPosts, staleTime: 1000 * 60 * 5,});
   return {
     posts,
     isLoading,

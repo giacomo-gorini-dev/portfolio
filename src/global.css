@@ -4,18 +4,19 @@
   --bg-surface: #0a151b;       
   --bg-surface-hover: #112028; 
 
-  /* --- Toni Petrolio e Verde Acqua --- */
+  /* --- Toni --- */
   --petrol-dark: #0f2b32;      
   --petrol-medium: #15424b;  
   --teal-accent: #1e6b7b;      
   --teal-light: #2da1b5;      
 
-  /* --- Testo e Contrasto --- */
+  /* --- Testo  --- */
   --text-primary: #e6f1f3;    
   --text-secondary: #8ab0b8;   
-  --text-muted: #4e7078;       
+  --text-muted: #4e7078;   
+  --text-error: rgb(145, 17, 17);    
 
-  /* --- Sfumature (Gradients) --- */
+  /* --- Sfumature --- */
   --gradient-bg: linear-gradient(135deg, var(--bg-dark) 0%, #08171d 50%, var(--petrol-dark) 100%);
   --gradient-accent: linear-gradient(135deg, var(--teal-accent) 0%, var(--teal-light) 100%);
   --gradient-glow: radial-gradient(circle at center, rgba(45, 161, 181, 0.15) 0%, transparent 70%);
@@ -23,6 +24,7 @@
   /* --- Effetti --- */
   --border-subtle: rgba(45, 161, 181, 0.15);
   --shadow-glow: 0 0 20px rgba(45, 161, 181, 0.2);
+  --shadow-glow-red: 0 0 20px rgba(211, 88, 40, 0.2);
 }
 
 * {
@@ -37,4 +39,24 @@ body {
     width: 100vw;
     min-height: 100vh;
     overflow-x: hidden; 
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 1rem;
+  height: 0.2rem;
+  border-radius: 1rem;
+  background-color: var(--petrol-dark);
+  transition: all 0.3s ease-in;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--petrol-medium);
 }

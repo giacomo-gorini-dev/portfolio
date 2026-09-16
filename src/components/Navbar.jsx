@@ -9,30 +9,29 @@ import imgContact from "../assets/contact.png";
 function Navbar() {
   return (
     <nav className={styles.navbar}>
-      <h2>Menu</h2>
       <ul>
         <li>
           <Link to={"/"} className={styles.link}>
-            Home
             <img src={imgHome} alt="." />
+            Home
           </Link>
         </li>
         <li>
           <Link to={"/blog"} className={styles.link}>
-            Blog
             <img src={imgBlog} alt="." />
+            Blog
           </Link>
         </li>
         <li>
           <Link to={"/skills"} className={styles.link}>
-            Skills
             <img src={imgSkills} alt="." />
+            Skills
           </Link>
         </li>
         <li>
           <Link to={"/contact"} className={styles.link}>
-            Contact
             <img src={imgContact} alt="." />
+            Contact
           </Link>
         </li>
       </ul>
