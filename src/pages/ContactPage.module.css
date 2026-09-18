@@ -1,0 +1,154 @@
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+.form-contact {
+  font-size: 2rem;
+  width: 50%;
+  height: fit-content;
+  background-color: var(--petrol-medium);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  gap: 1rem;
+
+  .form-fields {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--text-primary);
+    font-weight: 700;
+  }
+
+  input,
+  textarea {
+    margin-top: 0.3rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    border: 1px solid var(--border-color, #ccc);
+    font-family: "Inter", sans-serif;
+    background-color: var(--input-bg, #fff);
+    color: var(--text-main, #000);
+  }
+
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+
+  button {
+    background: var(--gradient-accent);
+    color: var(--text-primary);
+    border: none;
+    font-family: "Inter", sans-serif;
+    padding: 0.6rem;
+    font-weight: 700;
+    border-radius: 0.3rem;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+  }
+
+  button:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-glow);
+  }
+
+  p {
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 2rem;
+    text-align: center;
+  }
+
+  .fail {
+    background-color: red;
+    border: 1.5px solid lightcoral;
+    color: lightcoral;
+  }
+  .fail::before {
+    content: "X";
+    color: lightcoral;
+  }
+  .success {
+    background-color: green;
+    border: 1.5px solid lightgreen;
+    color: lightgreen;
+  }
+
+  .success::before {
+    content: "✔";
+    color: lightgreen;
+  }
+}
+
+.contact-data {
+  background-color: var(--petrol-medium);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 50%;
+  height: fit-content;
+  font-size: 2rem;
+  align-items: flex-start;
+  color: var(--text-primary);
+  border-radius: 0.5rem;
+  h2 {
+    border-radius: 1.5rem;
+    padding: 0.4rem;
+  }
+
+  .airplane {
+    width: 70%;
+    filter: invert(1);
+    margin-left: auto;
+  }
+}
+
+.contact-list {
+  border-radius: 1.5rem;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  li img {
+    width: 2rem;
+    height: 2rem;
+    filter: invert(1);
+  }
+  li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 800;
+    transition: color 0.05s ease-in;
+  }
+
+  a:hover {
+    color: #ff312e;
+  }
+}

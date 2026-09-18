@@ -6,7 +6,7 @@ import SkillsPage from "./pages/SkillsPage";
 import ContactPage from "./pages/ContactPage";
 import RootLayout from "./RootLayout";
 
-import BlogOverlayPortal from "./components/BlogOverlayPortal";
+import PostOverlayPortal from "./components/PostOverlayPortal";
 import SkillOverlayPortal from "./components/SkillOverlayPortal";
 
 const router = createBrowserRouter([
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
         children:[
           {
             path:":postId",
-            element: <BlogOverlayPortal />,
+            element: <PostOverlayPortal />,
           }
         ],
       },

@@ -2,7 +2,7 @@ import styles from "./HomePage.module.css";
 
 import SpiralBackground from "../components/SpiralBackground";
 
-import BlogPreview from "../components/BlogPreview";
+import PostPreview from "../components/PostPreview";
 
 import { Link } from "react-router-dom";
 
@@ -14,7 +14,7 @@ import imgItaly from "../assets/italyFlag.svg";
 
 function HomePage() {
   const { posts, isLoading, error, refetch } = usePosts();
-  const bestProjects=posts?.filter((p)=>p.is_best);
+  const bestProjects = posts?.filter((p) => p.is_best).slice(0,3);
   return (
     <section className={styles.home}>
       <SpiralBackground />
@@ -51,7 +51,7 @@ function HomePage() {
       </div>
 
       <div className={styles["best-projects"]}>
-        <h2>My Best Projects</h2>
+        <h2>My Best 3 Projects</h2>
 
         {isLoading && (
           <div className={styles.loaderContainer}>
@@ -72,17 +72,21 @@ function HomePage() {
           </div>
         )}
 
-        {!isLoading &&
-          !error &&
-          (bestProjects.length == 0 ? (
-            <h2 style={{ color: "var(--text-secondary)", fontSize: "1.3rem" }}>
-              Nothing to see here yet!
-            </h2>
-          ) : (
-            bestProjects.map((post) => (
-              <BlogPreview key={post.id} post={post}></BlogPreview>
-            ))
-          ))}
+        <div className={styles["blog-preview"]}>
+          {!isLoading &&
+            !error &&
+            (bestProjects.length == 0 ? (
+              <h2
+                style={{ color: "var(--text-secondary)", fontSize: "1.3rem" }}
+              >
+                Nothing to see here yet!
+              </h2>
+            ) : (
+              bestProjects.map((post) => (
+                <PostPreview key={post.id} post={post}></PostPreview>
+              ))
+            ))}
+        </div>
       </div>
       <div className={styles.CTA}>
         <Link to={"/blog"} className={styles["link-CTA"]}>

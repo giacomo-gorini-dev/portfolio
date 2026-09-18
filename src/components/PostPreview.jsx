@@ -1,5 +1,5 @@
-import styles from "./BlogPreview.module.css"
-function BlogPreview({post}){
+import styles from "./PostPreview.module.css"
+function PostPreview({post}){
     return(
         <div className={styles.card}>
             <img src={post.media_urls} alt="Post's picture" />
@@ -7,4 +7,4 @@ function BlogPreview({post}){
         </div>
     );
 }
-export default BlogPreview;
+export default PostPreview;
